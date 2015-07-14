@@ -1,2 +1,1 @@
-# jaredcowan.com
-My personal site
+# jaredlucascowan.com
