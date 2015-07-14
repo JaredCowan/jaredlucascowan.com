@@ -2,7 +2,6 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-
 development:
   <<: *default
   database: jaredcowan_development
@@ -12,5 +11,3 @@ test:
 production:
   <<: *default
   database: jaredcowan_production
-  username: jaredcowan
-  password: <%= ENV['JAREDCOWAN_DATABASE_PASSWORD'] %>
