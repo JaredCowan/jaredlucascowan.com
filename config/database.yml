@@ -8,6 +8,3 @@ development:
 test:
   <<: *default
   database: jaredcowan_test
-production:
-  <<: *default
-  database: jaredcowan_production
