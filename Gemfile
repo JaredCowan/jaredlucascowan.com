@@ -7,6 +7,9 @@ gem 'rails', '4.1.12'
 # database
 gem 'pg'
 
+# Monitoring
+gem 'rack-google-analytics'     # https://github.com/kangguru/rack-google-analytics
+
 # routes javascript-ified
 gem 'js-routes'
 
@@ -15,6 +18,8 @@ gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'autoprefixer-rails'
 gem 'sass-rails', '~> 4.0.3'
+gem 'headjs-rails'
+gem 'modernizr-rails'
 
 gem 'kaminari'                  # pagination
 gem 'ffaker'                    # create dummy data
