@@ -3,4 +3,4 @@
 
 //= require vendor/semantic-ui/semantic
 
-//= require ./global
+//= require globals/all
