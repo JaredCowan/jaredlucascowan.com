@@ -24,6 +24,8 @@ module Jaredcowan
 
     config.i18n.default_locale = :en
 
+    config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-65140328-1'
+
     # Disable rails default generators
     config.generators do |g|
       g.view_specs    false
