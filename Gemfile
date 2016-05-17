@@ -7,6 +7,9 @@ gem 'rails', '4.1.12'
 # database
 gem 'pg'
 
+# Authentication
+gem 'devise'
+
 # Monitoring
 gem 'rack-google-analytics'     # https://github.com/kangguru/rack-google-analytics
 
