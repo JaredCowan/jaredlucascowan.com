@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
-  def index
+  def index; end
+  def portfolio
+    ga_track_event("Page", "portfolio", "navbar")
   end
 end
