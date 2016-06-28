@@ -15,6 +15,7 @@ gem 'rack-google-analytics'     # https://github.com/kangguru/rack-google-analyt
 
 # routes javascript-ified
 gem 'js-routes'
+gem 'sitemap_generator'
 
 # assets
 gem 'jquery-rails'
@@ -23,6 +24,8 @@ gem 'autoprefixer-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem 'headjs-rails'
 gem 'modernizr-rails'
+
+gem "paperclip", "~> 4.2"
 
 gem 'kaminari'                  # pagination
 gem 'ffaker'                    # create dummy data
