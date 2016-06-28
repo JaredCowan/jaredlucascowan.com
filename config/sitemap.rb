@@ -1,6 +1,8 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "http://www.jaredlucascowan.com"
 
+# rake sitemap:refresh
+
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
   #
@@ -25,7 +27,9 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
-  add '/', :priority => 1.0
+  add '/', :priority => 1.0, :changefreq => 'daily'
 
-  add '/portfolio', :priority => 0.75
+  add '/portfolio', :priority => 0.75, :changefreq => 'daily'
+
+  add '/resume.pdf', :priority => 0.85, :changefreq => 'daily'
 end
