@@ -1,48 +1,72 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# define ruby/rails version
-ruby '2.1.5'
-gem 'rails', '4.1.12'
+ruby "3.1.2"
 
-# database
-gem 'pg'
+# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem "rails", "~> 7.0.4"
 
-# Authentication
-gem 'devise'
+# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem "sprockets-rails"
 
-# Monitoring
-gem 'rack-google-analytics'     # https://github.com/kangguru/rack-google-analytics
+# Use postgresql as the database for Active Record
+gem "pg", "~> 1.1"
 
-# routes javascript-ified
-gem 'js-routes'
-gem 'sitemap_generator'
+# Use the Puma web server [https://github.com/puma/puma]
+gem "puma", "~> 5.0"
 
-# assets
-gem 'jquery-rails'
-gem 'uglifier', '>= 1.3.0'
-gem 'autoprefixer-rails'
-gem 'sass-rails', '~> 4.0.3'
-gem 'headjs-rails'
-gem 'modernizr-rails'
+# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem "importmap-rails"
 
-gem "paperclip", "~> 4.2"
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem "turbo-rails"
 
-gem 'kaminari'                  # pagination
-gem 'ffaker'                    # create dummy data
+# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem "stimulus-rails"
 
-group :development do
-  gem 'better_errors'           # better error screen
-  gem 'binding_of_caller'       # extra features for better_errors
-end
+# Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem "jbuilder"
+
+# Use Redis adapter to run Action Cable in production
+gem "redis", "~> 4.0"
+
+# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
+# gem "kredis"
+
+# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+# gem "bcrypt", "~> 3.1.7"
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+
+# Reduces boot times through caching; required in config/boot.rb
+gem "bootsnap", require: false
+
+# Use Sass to process CSS
+# gem "sassc-rails"
+
+# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+# gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  gem 'spring'                  # keep application running in the background
-  gem 'awesome_print'           # pretty print debugging output
-  gem 'quiet_assets'            # logging
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
-group :production do
-  gem 'memcachier'              # heroku add-on for auto config of dalli
-  gem 'unicorn'                 # server
-  gem 'rails_12factor'          # https://devcenter.heroku.com/articles/rails4
+group :development do
+  # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "web-console"
+
+  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
+  # gem "rack-mini-profiler"
+
+  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  # gem "spring"
+end
+
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "webdrivers"
 end

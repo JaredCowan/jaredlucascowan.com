@@ -1,38 +1,22 @@
-require File.expand_path('../boot', __FILE__)
+require_relative "boot"
 
-require "rails"
-# Pick the frameworks you want:
-require "active_model/railtie"
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "sprockets/railtie"
-# require "rails/test_unit/railtie"
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Jaredcowan
+module JaredlucascowanCom
   class Application < Rails::Application
-    config.time_zone = 'America/Los_Angeles'
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 7.0
 
-    # Disable I18n locale deprecation warning caused by newrelic gem
-    # http://stackoverflow.com/questions/20361428/rails-i18n-validation-deprecation-warning
-    I18n.enforce_available_locales = true
-
-    config.i18n.default_locale = :en
-
-    config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-65140328-1'
-
-    # Disable rails default generators
-    config.generators do |g|
-      g.view_specs    false
-      g.helper_specs  false
-      g.stylesheets   false
-      g.javascripts   false
-      g.helper        false
-    end
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    # config.time_zone = "Central Time (US & Canada)"
+    # config.eager_load_paths << Rails.root.join("extras")
   end
 end
